@@ -58,3 +58,9 @@ fn share_something<T: Shareable>(item: T) {
 // 他顶多是 Readable|Printable来使用，
 // 而Shareable这个类型实则是不存在的类型，
 // 所以必须在Readable和Printable的接口内也有share才行
+
+// 在底层，Rust 的 trait 和 Haskell 的 typeclass 
+// 都是通过生成一种称为 "vtable" 或 "dispatch table" 的数据结构来实现的
+// 这个表包含了一个类型的所有方法的指针。
+// 当你调用一个 trait 方法时，
+// Rust 会查找这个表来找到正确的方法实现。
