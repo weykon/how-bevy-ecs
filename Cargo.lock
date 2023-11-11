@@ -5,3 +5,7 @@ version = 3
 [[package]]
 name = "how-bevy-ecs"
 version = "0.1.0"
+
+[[package]]
+name = "text_adventure_game"
+version = "0.1.0"
